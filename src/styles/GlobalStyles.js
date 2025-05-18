@@ -8,9 +8,18 @@ const GlobalStyles = createGlobalStyle`
     --neon-green: #00ff88;
   }
 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
   }
 
   body {
@@ -20,12 +29,19 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--bg-dark);
     color: var(--text-white);
     line-height: 1.5;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  *, *::before, *::after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -40,6 +56,16 @@ const GlobalStyles = createGlobalStyle`
 
   button {
     font-family: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 
   /* Custom scrollbar */
@@ -58,6 +84,16 @@ const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar-thumb:hover {
     background: #00cc6e;
+  }
+
+  /* Prevent text size adjustment on orientation change */
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Remove tap highlight on mobile */
+  * {
+    -webkit-tap-highlight-color: transparent;
   }
 `;
 

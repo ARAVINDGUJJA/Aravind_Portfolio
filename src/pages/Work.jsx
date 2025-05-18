@@ -8,12 +8,21 @@ const WorkContainer = styled.div`
   padding: 6rem 2rem 2rem;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 4rem 1rem 1rem;
+  }
 `;
 
 const ProjectsContainer = styled(motion.div)`
   display: flex;
   width: 100%;
   height: calc(100vh - 8rem);
+  
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: calc(100vh - 6rem);
+  }
 `;
 
 const ProjectCard = styled(motion.div)`
@@ -25,6 +34,8 @@ const ProjectCard = styled(motion.div)`
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 2rem;
+    padding: 0 1rem;
+    overflow-y: auto;
   }
 `;
 
@@ -34,6 +45,10 @@ const ProjectInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   padding-right: 2rem;
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+  }
 `;
 
 const ProjectNumber = styled.div`
@@ -44,6 +59,11 @@ const ProjectNumber = styled.div`
   opacity: 0.5;
   line-height: 1;
   margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const ProjectTitle = styled.h2`
@@ -51,6 +71,11 @@ const ProjectTitle = styled.h2`
   font-family: 'Space Mono', monospace;
   color: var(--text-white);
   margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 const ProjectDescription = styled.p`
@@ -59,6 +84,11 @@ const ProjectDescription = styled.p`
   line-height: 1.6;
   margin-bottom: 2rem;
   max-width: 600px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const TechStack = styled.div`
@@ -101,6 +131,10 @@ const ProjectImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  @media (max-width: 768px) {
+    margin: 1rem 0;
+  }
 `;
 
 const ProjectImage = styled(motion.div)`
@@ -118,11 +152,9 @@ const ProjectImage = styled(motion.div)`
     object-fit: cover;
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom right, rgba(0, 255, 136, 0.1), transparent);
+  @media (max-width: 768px) {
+    aspect-ratio: 16/10;
+    max-width: 100%;
   }
 `;
 
@@ -133,6 +165,11 @@ const NavigationButtons = styled.div`
   display: flex;
   gap: 1rem;
   z-index: 10;
+
+  @media (max-width: 768px) {
+    bottom: 1rem;
+    right: 1rem;
+  }
 `;
 
 const NavButton = styled.button`
@@ -158,6 +195,12 @@ const NavButton = styled.button`
     opacity: 0.5;
     cursor: not-allowed;
     transform: none;
+  }
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
   }
 `;
 
