@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import profileImage from '../assets/a1.jpg';
 
@@ -11,11 +11,13 @@ const HomeContainer = styled.div`
   padding: 6rem 2rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
+  overflow-x: hidden;
 
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
-    padding-top: 8rem;
+    padding: 6rem 1rem 2rem;
   }
 `;
 
@@ -103,7 +105,7 @@ const ProfileImage = styled.div`
   height: 400px;
   border-radius: 50%;
   position: relative;
-  
+
   img {
     width: 100%;
     height: 100%;
@@ -133,8 +135,13 @@ const ProfileImage = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
+  }
+
+  @media (max-width: 480px) {
+    width: 220px;
+    height: 220px;
   }
 `;
 
@@ -186,12 +193,6 @@ const Home = () => {
           <SocialIcon href="https://www.linkedin.com/in/g-aravind-3306b0287/" target="_blank">
             <FontAwesomeIcon icon={faLinkedin} />
           </SocialIcon>
-          <SocialIcon href="https://www.youtube.com/@aravindaru3941" target="_blank">
-            <FontAwesomeIcon icon={faYoutube} />
-          </SocialIcon>
-          <SocialIcon href="https://x.com/gujjaaravind" target="_blank">
-            <FontAwesomeIcon icon={faTwitter} />
-          </SocialIcon>
         </SocialLinks>
       </LeftSection>
       <RightSection>
@@ -203,4 +204,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;

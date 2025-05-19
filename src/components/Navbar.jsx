@@ -227,7 +227,7 @@ const Navbar = () => {
           Resume
         </NavLink>
         <NavLink to="/work" className={location.pathname === '/work' ? 'active' : ''}>
-          Work
+          Projects
         </NavLink>
         <NavLink to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>
           Contact
